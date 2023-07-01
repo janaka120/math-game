@@ -20,6 +20,19 @@ class MainActivity : AppCompatActivity() {
 
         addition.setOnClickListener {
             val intent = Intent(this@MainActivity, GameActivity::class.java)
+            intent.putExtra("operationType", "add")
+            startActivity(intent)
+        }
+
+        subtraction.setOnClickListener {
+            val intent = Intent(this@MainActivity, GameActivity::class.java)
+            intent.putExtra("operationType", "sub")
+            startActivity(intent)
+        }
+
+        multifiction.setOnClickListener {
+            val intent = Intent(this@MainActivity, GameActivity::class.java)
+            intent.putExtra("operationType", "mul")
             startActivity(intent)
         }
     }
